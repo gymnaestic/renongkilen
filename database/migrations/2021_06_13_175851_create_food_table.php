@@ -16,7 +16,7 @@ class CreateFoodTable extends Migration
         Schema::create('food', function (Blueprint $table) {
             $table->increments('idFood');
             $table->string('foodName', 100);
-            $table->foreign('foodCategory')->references('idFoodCatalog')->on ('food_catalog');
+            $table->integer('foodCategory');
             $table->integer('foodPrice');
             $table->text('foodDescription');
             $table->binary('foodPicture'); 
